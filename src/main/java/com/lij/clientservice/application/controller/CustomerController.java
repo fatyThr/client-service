@@ -1,4 +1,4 @@
-package com.lij.clientservice.application.rest;
+package com.lij.clientservice.application.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

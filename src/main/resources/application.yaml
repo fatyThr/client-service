@@ -1,0 +1,30 @@
+server:
+  port: 9090
+
+spring:
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:clientdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+application:
+  # client services
+  feign:
+    product:
+      name: products-service
+      url: http://localhost:8080
